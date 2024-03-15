@@ -301,13 +301,8 @@ db.user2.find({ país: { $eq: "India" }, salario: { $exists: false } });
 
 
 //para eliminar a todos los que tengan 22 años
-<<<<<<< HEAD
 db.user2.deleteMany({edad:{$in:22}});
 db.user2.deleteMany({edad:22});
-=======
- db.user2.deleteMany({edad:{$in:22}});
- db.user2.deleteMany({edad:22});
->>>>>>> eadec971f8c8a3a064ea6c0325479f87d0642645
 
 //para actualizar un solo dato
 
