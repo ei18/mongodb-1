@@ -286,3 +286,5 @@ db.user2.find({ país: { $ne: "Colombia" }, altura: { $lt: 170 } });
 db.user2.find({ país: { $eq: "India" }, salario: { $exists: false } });
 */
 
+//hola
+
