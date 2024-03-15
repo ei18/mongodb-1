@@ -14,6 +14,18 @@
 });
 
 db.user2.insertOne({
+    nombre: "Pedree",
+    apellido: "Gonzalezz",
+    correo: "pedro.gonzalez@example.com",
+    ciudad: "BoXD",
+    país: "Estados Unidos",
+    salario: 52000,
+    edad: 22,
+    altura: 170,
+    peso: 160
+});
+
+db.user2.insertOne({
     nombre: "Ana",
     apellido: "Martinez",
     correo: "ana.martinez@example.com",
@@ -285,4 +297,111 @@ db.user2.find({ país: { $ne: "Colombia" }, altura: { $lt: 170 } });
 // Obtener todos los usuarios que sean de India y que no tengan un salario registrado.
 db.user2.find({ país: { $eq: "India" }, salario: { $exists: false } });
 */
+ 
 
+
+//para eliminar a todos los que tengan 22 años
+db.user2.deleteMany({edad:{$in:22}});
+db.user2.deleteMany({edad:22});
+
+//para actualizar un solo dato
+
+db.user2.updateOne({nombre: "carlos"},{$set: {nomre: "pedro carlos"}})
+
+//hola
+
+
+//opopopopopopo
+
+//Operaciones de Actualización
+
+
+//Incrementar el salario de todos los usuarios en un 10%.
+
+
+
+//Cambiar la ciudad de residencia de los usuarios que actualmente viven en "New York" a "Los Ángeles".
+
+// Agregar el correo electrónico "nuevo@correo.com" al usuario con nombre "Juan" y apellido "Perez".
+
+// Actualizar la edad del usuario con correo electrónico "ejemplo@correo.com" a 35 años.
+
+// Cambiar el país de residencia de los usuarios que son de "Mexico" a "Canada".
+
+// Aumentar la altura de todos los usuarios en 5 centímetros.
+
+// Cambiar el apellido del usuario con correo electrónico "otro@ejemplo.com" a "González".
+
+// Actualizar el peso del usuario con nombre "Maria" a 140 libras.
+
+// Incrementar el salario de todos los usuarios que son de "Estados Unidos" en un 15%.
+
+// Actualizar el correo electrónico del usuario con nombre "Pedro" a "nuevo_correo@riwi.co".
+
+// Cambiar la edad de todos los usuarios menores de 30 años a 30 años.
+
+// Incrementar el salario de los usuarios que tienen un salario inferior a 3000 dólares en un 20%.
+
+// Actualizar la ciudad de residencia de todos los usuarios que actualmente viven en "Bogotá" a "Medellín".
+
+// Cambiar el país de residencia de los usuarios con un salario superior a 5000 dólares a "Australia".
+
+// Reducir la edad de todos los usuarios que tienen más de 50 años en 5 años.
+
+// Actualizar el peso de los usuarios que pesan más de 200 libras a 180 libras.
+
+// Incrementar el salario de los usuarios que viven en "London" en un 25%.
+
+// Cambiar el apellido de los usuarios con un salario superior a 4000 dólares a "Smith".
+
+// Actualizar el correo electrónico de todos los usuarios cuyo nombre empiece por "A" a "nuevo@riwi.es".
+
+// Cambiar la ciudad de residencia de los usuarios con una altura inferior a 160 centímetros a "París".
+
+
+
+// 
+
+
+// Operaciones de Eliminación
+
+
+// Eliminar todos los usuarios que tienen un salario menor que 2000 dólares.
+
+// Eliminar usuarios que tienen una edad menor que 25 años.
+
+// Borrar todos los usuarios que viven en "París".
+
+// Eliminar usuarios que tienen un peso superior a 180 libras.
+
+// Eliminar usuarios que tienen una altura inferior a 160 centímetros.
+
+// Eliminar todos los usuarios que tienen el nombre "John" y el apellido "Doe".
+
+// Borrar usuarios que tienen una dirección de correo electrónico específica, por ejemplo, "borrar@riwi.com".
+
+// Eliminar usuarios que no tienen una dirección de correo electrónico registrada.
+
+// Eliminar usuarios que viven en "Tokyo".
+
+// Borrar todos los usuarios que son menores de 18 años.
+
+// Eliminar usuarios que tienen un salario igual a 0.
+
+// Borrar usuarios que viven en "New York" y tienen un salario superior a 5000 dólares.
+
+// Eliminar usuarios que tienen una dirección de correo electrónico que contiene la palabra "spam".
+
+// Borrar usuarios que viven en "Bello" y tienen más de 50 años.
+
+// Eliminar todos los usuarios que tienen el apellido "González".
+
+// Borrar usuarios que tienen una edad superior a 70 años.
+
+// Eliminar usuarios que tienen un país de residencia igual a "Canadá" y un salario inferior a 4000 dólares.
+
+// Borrar usuarios que tienen un salario entre 1000 y 2000 dólares.
+
+// Eliminar usuarios que tienen una edad igual a 30 años.
+
+// Borrar usuarios que tienen una altura superior a 190 centímetros.
