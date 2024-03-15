@@ -14,6 +14,18 @@
 });
 
 db.user2.insertOne({
+    nombre: "Pedree",
+    apellido: "Gonzalezz",
+    correo: "pedro.gonzalez@example.com",
+    ciudad: "BoXD",
+    país: "Estados Unidos",
+    salario: 52000,
+    edad: 22,
+    altura: 170,
+    peso: 160
+});
+
+db.user2.insertOne({
     nombre: "Ana",
     apellido: "Martinez",
     correo: "ana.martinez@example.com",
@@ -285,6 +297,16 @@ db.user2.find({ país: { $ne: "Colombia" }, altura: { $lt: 170 } });
 // Obtener todos los usuarios que sean de India y que no tengan un salario registrado.
 db.user2.find({ país: { $eq: "India" }, salario: { $exists: false } });
 */
+ 
+
+
+//para eliminar a todos los que tengan 22 años
+ db.user2.deleteMany({edad:{$in:22}});
+ db.user2.deleteMany({edad:22});
+
+//para actualizar un solo dato
+
+db.user2.updateOne({nombre: "carlos"},{$set: {nomre: "pedro carlos"}})
 
 //hola
 
