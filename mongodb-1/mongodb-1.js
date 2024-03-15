@@ -310,3 +310,6 @@ db.user2.updateOne({nombre: "carlos"},{$set: {nomre: "pedro carlos"}})
 
 //hola
 
+
+//opopopopopopo
+
